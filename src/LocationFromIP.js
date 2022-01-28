@@ -72,7 +72,10 @@ export class LocationFromIP extends LitElement {
     // this means you can make new variables and then bind them this way if you like
     const url = `https://maps.google.com/maps?q=${this.lat},${this.long}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
     return html`
-      <iframe title="Where you are" src="${url}"></iframe>
+      <iframe title="Where you are" src="${url}"></iframe> <br />
+      <a href="https://www.google.com/maps/@${this.long},${this.lat},14z"
+        >View on Google</a
+      >
       <wikipedia-query search="${this.city}, ${this.state}"></wikipedia-query>
       <wikipedia-query search="${this.city}"></wikipedia-query>
       <wikipedia-query search="${this.state}"></wikipedia-query>
